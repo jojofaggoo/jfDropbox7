@@ -11,8 +11,9 @@ $host = "jfsecondserverfordropbox7.mysql.database.azure.com";
 $user = "ljfague1";
 $password = "Unity916";
 $db = "visitordb";
-
+$servername = "jfsecondserverfordropbox7.mysql.database.azure.com";
 // Connect to the database
+$conn = new mysqli($servername, $username, $password);
 $conn = mysqli_init();
 if (!mysqli_real_connect($conn, $host, $user, $password, $db)) {
 die("Connection failed: " . mysqli_connect_error());
