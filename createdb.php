@@ -8,11 +8,10 @@
 <?php 
 // Replace the user and password with your credentials
 $host = "jfsecondserverfordropbox7.mysql.database.azure.com";
-//$user = "ljfague1";
-//$password = "Unity916";
+$user = "ljfague1";
+$password = "Unity916";
 $db = "visitordb";
-$user ="$Dropbox7secondjfsite";
-$password = "ydrztdZubkAoT4TL6uJFqRmH70DfqgjmYjXpAzhMMRkyfHFuawhLA0nBqYtj";
+
 // Connect to the database
 
 $conn = mysqli_init();
