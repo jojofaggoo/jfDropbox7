@@ -8,21 +8,18 @@
 <?php 
 // Replace the user and password with your credentials
 $host = "jfsecondserverfordropbox7.mysql.database.azure.com";
-$user = "ljfague1";
-$password = "Unity916";
+//$user = "ljfague1";
+//$password = "Unity916";
 $db = "visitordb";
-$servername = "jfsecondserverfordropbox7.mysql.database.azure.com";
+$user ="$Dropbox7secondjfsite";
+$password = "ydrztdZubkAoT4TL6uJFqRmH70DfqgjmYjXpAzhMMRkyfHFuawhLA0nBqYtj";
 // Connect to the database
-$conn = new mysqli($servername, $username, $password);
+
 $conn = mysqli_init();
-if (!mysqli_real_connect($conn, $host, $user, $password, $db)) {
-die("Connection failed: " . mysqli_connect_error());
-}
+mysqli_real_connect($conn, $host, $user, $password, $db)
 // Drop the table if it exists
 $dropQuery = "DROP TABLE IF EXISTS visitor;";
-if (!mysqli_query($conn, $dropQuery)) {
-echo "<p>Error dropping table: " . mysqli_error($conn) . "</p>";
-}
+mysqli_query($conn, $dropQuery)
 
 $query = "CREATE TABLE visitor (
 visitorid INTEGER AUTO_INCREMENT,
@@ -36,7 +33,6 @@ echo "<p>Table Created.</p>";
 } else {
 echo "<p>Error creating table: " . mysqli_error($conn) . "</p>";
 }
-
 // Close connection
 mysqli_close($conn);
 ?>
